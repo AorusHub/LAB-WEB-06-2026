@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantai Losari | Wisata Makassar</title>
+</head>
+<body>
+    <header id="beranda">
+        <h1>Pantai Losari</h1>
+        <p>Wisata Pantai yang terkenal di Makassar</p>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#aktivitas">Aktivitas</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="#formulir">Formulir</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tentang">
+            <h2>Tentang Pantai Losari</h2>
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=80" alt="Pantai Losari" 
+            width="600"
+            height="500"/>
+            <p>
+                Pantai Losari adalah salah satu destinasi wisata paling terkenal di Makassar.
+                Pantai ini memiliki pemandangan sunset yang sangat indah dan banyak pengunjung
+                datang untuk menikmati suasana laut dan kuliner khas daerah.
+            </p>
+            <p>
+                Pantai Losari juga menjadi tempat yang cocok untuk berjalan santai, berfoto,
+                dan menikmati makanan khas Makassar di sekitar area pantai.
+            </p>
+        </section>
+
+        <section id="galeri">
+            <h2>Galeri Foto</h2>
+            <div>
+                <img src="Assets/Pantai_Losari_1.jpg" alt="Pantai Losari saat sore hari"
+                width="500"/>
+                <img src="Assets/Pantai_Losari_2.jpg" alt="Wisatawan di Pantai Losari" width="500"/>
+                <img src="Assets/Pantai_Losari_3.jpg" alt="Kuliner di sekitar Pantai Losari" width="500" height="400"/>
+            </div>
+        </section>
+
+      
+        <section id="aktivitas">
+            <h2>Daftar Aktivitas</h2>
+            <ul>
+                <li>
+                    <h3>Menikmati Sunset</h3>
+                    <p>Menunggu waktu senja sambil menikmati pemandangan laut yang memesona dan warna langit yang berubah.</p>
+                </li>
+                <li>
+                    <h3>Jalan Santai di Tepi Pantai</h3>
+                    <p>Berjalan santai sambil menikmati angin laut dan suasana ramai pengunjung di sekitar area wisata.</p>
+                </li>
+                <li>
+                    <h3>Mencicipi Kuliner</h3>
+                    <p>Menikmati makanan khas Makassar seperti pisang epe, coto, dan berbagai jajanan pinggir pantai.</p>
+                </li>
+                <li>
+                    <h3>Fotografi</h3>
+                    <p>Memotret pemandangan laut, sunset, dan aktivitas wisatawan untuk kenang-kenangan.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="lokasi">
+            <h2>Informasi Lokasi</h2>
+            <div>
+                <p><strong>Alamat:</strong> Jl. Penghibur, Kecamatan Ujung Tanah, Makassar, Sulawesi Selatan</p>
+                <p><strong>Jam Buka:</strong> Setiap hari, 08.00 - 22.00 WITA</p>
+                <p><strong>Biaya Masuk:</strong> Gratis</p>
+                <p><strong>Transportasi:</strong> Mudah dijangkau dari pusat kota dankendaraan umum</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tabel Informasi</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Fasilitas</th>
+                        <th>Deskripsi</th>
+                        <th>Catatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Area Santai</td>
+                        <td>Tempat duduk dan area panorama untuk menikmati sunset</td>
+                        <td>Tersedia di sepanjang tepian pantai</td>
+                    </tr>
+                    <tr>
+                        <td>Warung Kuliner</td>
+                        <td>Berbagai makanan dan minuman khas Makassar</td>
+                        <td>Biasanya ramai saat sore hari</td>
+                    </tr>
+                    <tr>
+                        <td>Toilet Umum</td>
+                        <td>Fasilitas kebersihan untuk pengunjung</td>
+                        <td>Terletak di area utama wisata</td>
+                    </tr>
+                    <tr>
+                        <td>Parkir</td>
+                        <td>Area parkir kendaraan roda dua dan roda empat</td>
+                        <td>Disarankan datang lebih awal saat weekend</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulir">
+            <h2>Formulir Reservasi & Pertanyaan</h2>
+               <form>
+                    <div>
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div>
+                        <label for="tanggal">Tanggal Kunjungan</label>
+                        <input type="date" id="tanggal" name="tanggal" required />
+                    </div>
+
+                    <div>
+                        <label for="jumlah">Jumlah Pengunjung</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="20" value="1" />
+                    </div>
+
+                    <div>
+                        <label for="keperluan">Keperluan Kunjungan</label>
+                        <select id="keperluan" name="keperluan">
+                            <option value="wisata">Wisata keluarga</option>
+                            <option value="kuliner">Kuliner malam</option>
+                            <option value="foto">Fotografi</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="pesan">Pesan Tambahan</label>
+                        <textarea id="pesan" name="pesan"></textarea>
+                    </div>
+                    <input type="submit" value="Kirim Data" /> <input type="reset" value="Reset" />
+                </form>
+
+                    <h3>Tips Berwisata</h3>
+                    <ul>
+                        <li>Datang sebelum sunset agar dapat menikmati pemandangan paling indah.</li>
+                        <li>Bawa alas duduk dan minuman ringan untuk kenyamanan.</li>
+                        <li>Pastikan membawa uang tunai karena beberapa kios masih memakai pembayaran kas.</li>
+                        <li>Jaga kebersihan area dan patuhi arahan petugas setempat.</li>
+                    </ul>
+        </section>
+        
+        <section>
+            <h2>Multimedia</h2>
+                <video width="600" controls>
+                    <source src="Assets/Pantai_Losari.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutar video.
+                </video>   
+        </section>
+    </main>
+    <br>
+    <footer>
+        <div>
+            <strong>Pantai Losari</strong>
+            <p>Destinasi wisata andalan Kota Makassar</p>
+            <p>Instagram: @pantailosari</p>
+            <p>Email: info@pantailosari.makassar</p>
+        </div>
+        <p>© 2026 Pantai Losari - Makassar</p>
+    </footer>
+</body>
+</html>
