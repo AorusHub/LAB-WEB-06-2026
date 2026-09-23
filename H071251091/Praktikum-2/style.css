@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+#GambarUtama {
+    position: relative;
+    text-align: center;
+}
+
+#GambarUtama img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* agar gambar tidak meregang */
+   background: rgba(0, 100, 200, 0.4);
+}
+
+#GambarUtama a {
+    color: aliceblue;
+    padding: 6px 10px;
+    border-radius: 4px; /* ujung kotak*/
+    
+}
+
+
+#GambarUtama h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#GambarUtama p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#GambarUtama nav {
+    display: flex;
+    padding: 4px;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+    
+
+#GambarUtama::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 18, 61, 0.744);
+}
+
+.Peta {
+    float: right;
+    width: 220px;
+    height: 185px;
+    margin-right: 100px;
+    margin-top: 30px;
+    border: 8px solid white !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
+    
+}
+
+.Deskripsi {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 877px;
+    padding: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+}
+
+.GambarRajaAmpat {
+    position: relative;
+}
+
+.GambarRajaAmpat img {
+    float: left;
+    width: 650px;
+    height: 290px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border: 8px solid white;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.35);
+    border-bottom: 40px solid white;
+
+}
+
+.GambarRajaAmpat h4 {
+    position: absolute;
+    margin-top: 335px;
+    margin-left: 335px;
+   
+}
+
+.Aktivitas {
+    margin-left: 100px;
+}
+
+#Dokumentasi {
+    clear: both;               
+    max-width: 720px;         
+    margin: 50px auto;       
+    padding: 25px;
+    background-color: #f5f9ff;
+    border: 1px solid #d6e4f5;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#Dokumentasi h3 {
+    margin: 0 0 8px;
+    color: #0f123d;
+    font-size: 22px;
+}
+
+#Dokumentasi p {
+    margin: 0 0 18px;
+    color: #555;
+    font-size: 14px;
+}
+
+#Dokumentasi video {
+    display: block; /*di paksa menjadi kotak murni tanpa ada cela*/
+    width: 100%;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#Dokumentasi:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#Table {
+    clear: both;          
+    margin-left: 10%;
+}
+
+table {
+    width: 80%;
+    margin: 10px auto 30px;       
+    border-collapse: collapse;  
+}
+
+th, td {
+    border: 1px solid #ccc;       
+    padding: 10px 14px;           
+    text-align: left;
+}
+
+th {
+    background-color: #0f123d;   
+    color: white;
+}
+
+tr:hover td {
+    background-color: #e6f2ff;
+}
+
+#Formulir {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#Formulir input,
+#Formulir select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;  
+}
+
+button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #0f123d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e6fd9;
+}
+
+#GambarUtama a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#Objek {
+    clear: both;             
+    padding: 20px 5%;
+    text-align: center;
+}
+
+#Objek h2 {
+    color: #0f123d;
+    margin-bottom: 20px;
+}
+
+.DaftarWisata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.Kartu {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.Kartu img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;        
+    border-radius: 6px;
+}
+
+.Kartu:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.25);
+}
+
+.Kartu nav {
+    margin: 10px 0;
+}
+
+.Kartu nav a {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #0f123d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.Kartu nav a:hover {
+    background-color: #1e6fd9;
+}
+
+footer {
+    clear: both;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #0f123d;
+    color: white;
+    text-align: center;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+@media (max-width: 992px) {
+
+    
+    .GambarRajaAmpat img {
+        float: none;
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 30px auto 0;
+    }
+
+    .GambarRajaAmpat h4 {
+        position: static;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+
+   
+    .Peta {
+        float: none;
+        display: block;
+        width: 90%;
+        height: 250px;
+        margin: 20px auto;
+    }
+
+
+    .Deskripsi {
+        margin-left: 0;
+        padding: 0 5%;
+        font-size: 14px;
+    }
+
+    .Aktivitas {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    
+    #GambarUtama img {
+        height: 180px;
+    }
+
+    #GambarUtama h1 {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    #GambarUtama p {
+        font-size: 13px;
+    }
+
+    #GambarUtama nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+        gap: 10px;
+    }
+
+    #GambarUtama nav a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    table {
+        width: 95%;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px 8px;
+    }
+
+    #Formulir {
+        width: 90%;
+    }
+
+    .DaftarWisata {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Formulir {
+    margin-left: 130px;
+}
