@@ -10,20 +10,50 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  color: rgb(182, 245, 255);
+  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+}
+
+p {
+  font-family: "Centaur";
+  font-weight: 599;
+}
+
+/* ============= NAVIGATION BAR */
+
 .navbar {
-  background-color: rgba(34, 207, 255, 0.256);
+  background-color: rgba(34, 207, 255, 0.438);
   width: 100%;
   height: 60px;
   border-radius: 30px;
   position: fixed;
   top: 0;
-  z-index: 1000;
   display: flex;
   gap: 150px;
+  z-index: 1000;
+  flex-wrap: wrap;
+  justify-content: center;
 
   font-family: 'Lato';
   color: black;
 }
+
+.navbar img {
+  width: 110px;
+  height: 60px;
+
+  position: absolute;
+  left: 0;
+}
+
+.navbar a:hover {
+  font-size: 17px;
+  color: black;
+}
+
+/* ============= HERO */
 
 .hero {
   position: relative;
@@ -37,19 +67,13 @@ body {
 
 .hero-content {
   position: absolute;
-  right: 800px;
+  left: 200px;
   bottom: 90px;
   color: white;
-  font-size: 90%;
+  font-size: 15px;
   background: rgba(255, 255, 255, 0.311);
   padding: 15px 25px;
   border-radius: 10px;
-}
-
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  color: rgb(182, 245, 255);
-  -webkit-text-stroke: 0.2px black;
 }
 
 .hero-content a {
@@ -60,9 +84,15 @@ h1 {
   right: 10px;
 }
 
-p {
-  font-family: "Centaur";
-  font-weight: 599;
+#discover_the_story:hover {
+  color: rgb(0, 47, 95);
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+#discover_the_story:active {
+  transform: translateY(500px);
+  transition: 3s;
 }
 
 /* ============= PAGE2 */
@@ -87,7 +117,6 @@ p {
   position: absolute;
   width: auto;
   height: 400px;
-  align-content: right;
   z-index: 3;
   top: 72px;
   left: 750px;
@@ -112,7 +141,6 @@ p {
   width: 700px;
   height: 350px;
   z-index: 1;
-
   right: 100px;
 }
 
@@ -138,7 +166,6 @@ p {
   position: absolute;
   width: 250px;
   height: auto;
-  align-content: left;
   z-index: 1;
   top:270px;
   right: 650px;
@@ -161,7 +188,6 @@ p {
 
 .page3-title {
   position: absolute;
-  /* background-color: black; */
   left: 180px;
   top: 100px;
   font-size: large;
@@ -306,36 +332,6 @@ p {
 }
 
 /* ============= EXPLORE */
-/* 
-.explore {
-  position: relative;
-  width: 100%;
-  min-height: 700px;
-  background-image: url("background_explore.jpeg");
-  background-size: cover;
-  background-position: center;
-  z-index: 6;
-  overflow: hidden;
-}
-
-.explore-text {
-  position: absolute;
-  width: 500px;
-  left: 35%;
-  text-align: center;
-  top: 50px;
-}
-
-.explore-card {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-
-  top: 300px;
-}
- */
-
-/* ============= EXPLORE */
 
 .explore {
   position: relative;
@@ -391,6 +387,12 @@ p {
   color: black;
 }
 
+.explore-card-text a:hover {
+  color: rgb(72, 0, 74);
+  font-size: large;
+  transition: 0.5s;
+}
+
 .explore-card-img {
   width: 100%;
   height: 180px;
@@ -422,7 +424,7 @@ p {
   width: 500px;
   height: 500px;
   top: 3px;
-  right: 385px;
+  right: 30%;
 }
 
 .explore-video-box video {
@@ -457,6 +459,7 @@ p {
   padding: 25px;
   background-color: rgb(220, 248, 250);
   color: rgb(0, 76, 106);
+  z-index: 2;
 }
 
 .visit-img {
@@ -472,13 +475,10 @@ p {
   height: auto;
 }
 
-.visit-text {
-  z-index: 2;
-}
-
 .visit-info {
   position: relative;
   width: 900px;
+  max-width: 90%;
   margin: 50px auto;
   padding: 30px;
   background-color: white;
@@ -550,4 +550,327 @@ footer {
 
 footer a {
   color: rgb(72, 72, 72);
+}
+
+/* ============= @MEDIA */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .navbar img {
+    width: 80px;
+    height: 50px;
+  }
+
+  .hero-content {
+    left: 50px;
+    bottom: 50px;
+    max-width: 70%;
+  }
+
+  .page2-content,
+  .page3-content,
+  .page4-content,
+  .page5-content {
+    padding: 50px 30px;
+  }
+
+  .page2-text,
+  .page3-text,
+  .page4-text,
+  .page5-text {
+    width: 45%;
+  }
+
+  .page2-img img {
+    left: 55%;
+    width: 35%;
+    height: auto;
+  }
+
+  .page2-box {
+    width: 55%;
+  }
+
+  .page3-img img {
+    right: 50%;
+    width: 30%;
+  }
+
+  .page3-text {
+    right: 30px;
+  }
+
+  .page3-title {
+    left: 50px;
+  }
+
+  .page4-text {
+    left: 30px;
+  }
+
+  .page4-title {
+    right: 30px;
+  }
+
+  .page4-img1 img {
+    width: 25%;
+    right: 50px;
+  }
+
+  .page4-img2 img {
+    width: 35%;
+    right: 30px;
+  }
+
+  .page4-img3 img {
+    width: 28%;
+    right: 50px;
+  }
+
+  .page5-img img {
+    width: 45%;
+  }
+
+  .page5-text {
+    right: 30px;
+  }
+
+  .page5-title {
+    right: 15%;
+  }
+
+  .visit-text {
+    left: 30px;
+    width: 40%;
+  }
+
+  .visit-img {
+    right: 5%;
+  }
+
+  .visit-img img {
+    width: 50vw;
+  }
+
+  .explore-card {
+    width: 240px;
+  }
+
+  .explore-card:nth-of-type(2) {
+    left: 20px;
+  }
+
+  .explore-card:nth-of-type(4) {
+    right: 20px;
+  }
+
+  .explore-video-box {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: auto;
+    min-height: 60px;
+    gap: 40px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+  }
+
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 30px;
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .page2,
+  .page3,
+  .page4,
+  .page5 {
+    min-height: 800px;
+  }
+
+  .page2-content,
+  .page3-content,
+  .page4-content,
+  .page5-content {
+    display: block;
+    padding: 30px 20px;
+  }
+
+  .page2-text,
+  .page3-text,
+  .page4-text,
+  .page5-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .page2-img img,
+  .page3-img img,
+  .page4-img1 img,
+  .page4-img2 img,
+  .page4-img3 img,
+  .page5-img img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 20px 0;
+  }
+
+  .page2-box {
+    display: none;
+  }
+
+  .page3-title,
+  .page4-title,
+  .page5-title {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .explore {
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+
+  .explore-text {
+    position: relative;
+    width: 90%;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 30px auto;
+  }
+
+  .explore-card {
+    position: relative;
+    width: 90%;
+    height: auto;
+    min-height: 350px;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 30px auto;
+    transform: none;
+  }
+
+  .explore-card:nth-of-type(2),
+  .explore-card:nth-of-type(3),
+  .explore-card:nth-of-type(4) {
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+
+  .explore-video {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: auto;
+    top: 0;
+    transform: none;
+    margin: 50px auto 0;
+  }
+
+  .explore-video-box {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    top: -80px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    transform: none;
+  }
+
+  .explore-video-box video {
+    width: 80%;
+    height: auto;
+    transform: rotate(-90deg);
+  }
+
+  .visit {
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+
+  .visit-content {
+    min-height: auto;
+  }
+
+  .visit-text {
+    position: relative;
+    width: 90%;
+    left: auto;
+    top: auto;
+    margin: 30px auto;
+  }
+
+  .visit-img {
+    position: relative;
+    width: 90%;
+    right: auto;
+    top: auto;
+    margin: 30px auto;
+  }
+
+  .visit-img img {
+    width: 100%;
+  }
+
+  .visit-info {
+    width: 90%;
+    max-width: none;
+    padding: 20px;
+    margin: 40px auto;
+    overflow-x: auto;
+  }
+
+  .visit-info-table {
+    overflow-x: auto;
+  }
+
+  .visit-info-table table {
+    min-width: 600px;
+  }
+
+  .visit-form {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
 }

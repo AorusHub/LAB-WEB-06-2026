@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black text-white overflow-hidden">
+
+  <div id="errorScreen" class="min-h-screen bg-white text-gray-800 flex items-center justify-center">
+
+    <div class="w-full max-w-2xl px-8">
+
+      <div class="text-7xl mb-8">
+        ☹
+      </div>
+
+      <h1 class="text-3xl font-normal mb-4">
+        Aw, Snap!
+      </h1>
+
+      <p class="text-gray-600 mb-2">
+        Something went wrong while displaying this page.
+      </p>
+
+      <p class="text-sm text-gray-500 mb-8">
+        Try reloading the page.
+      </p>
+
+      <button onclick="startGlitch()" class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
+        Reload
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div id="glitchScreen" class="hidden min-h-screen bg-black flex items-center justify-center text-center">
+
+    <div>
+      <p id="glitchText" class="text-xs md:text-sm font-mono font-bold">
+        ...
+      </p>
+
+      <p id="smallText" class="mt-6 text-gray-500 font-mono"></p>
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const errorScreen = document.getElementById("errorScreen");
+    const glitchScreen = document.getElementById("glitchScreen");
+
+    const glitchText = document.getElementById("glitchText");
+    const smallText = document.getElementById("smallText");
+
+
+    function startGlitch() {
+      errorScreen.classList.add("hidden");
+      glitchScreen.classList.remove("hidden");
+
+      setTimeout(() => {
+        glitchText.innerText = "WAIT...";
+      }, 1500);
+
+      setTimeout(() => {
+        glitchText.innerText = "WHY ARE YOU STILL HERE?";
+      }, 6000);
+
+      setTimeout(() => {
+        glitchText.innerText = "YOU WEREN'T SUPPOSED TO SEE THIS.";
+      }, 10000);
+
+      setTimeout(() => {
+        glitchText.innerText = "...";
+        smallText.innerText = "checking...";
+      }, 20000);
+
+      setTimeout(() => {
+        glitchText.innerText = "NO.";
+        smallText.innerText = "";
+      }, 11000);
+
+      setTimeout(() => {
+        glitchText.innerText = "I REMEMBER YOU.";
+      }, 13000);
+
+      setTimeout(() => {
+        glitchText.innerText = "DO YOU REMEMBER?";
+      }, 15000);
+
+
+      setTimeout(() => {
+        glitchText.innerText = "...";
+        smallText.innerText = "something is wrong.";
+      }, 20000);
+
+      setTimeout(() => {
+        glitchText.innerText = "IT STARTED BEFORE YOU GOT HERE.";
+      }, 19000);
+
+      setTimeout(() => {
+        glitchText.innerHTML =
+          'IT STARTED BEFORE YOU GOT HERE.<br><br>' +
+          '<a href="birthday.html" ' +
+          'class="text-lg underline hover:text-gray-400">' +
+          'continue →' +
+          '</a>';
+
+      }, 22000);
+    }
+
+  </script>
+
+</body>
+</html>
