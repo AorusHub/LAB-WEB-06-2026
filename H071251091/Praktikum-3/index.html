@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <header>
+        <main class="pt-15">
+        </main>
+
+        <div>
+            <div class="bg-black flex justify-between items-center px-10 fixed top-0 z-50 left-0 w-full">
+
+                <h3 class="font-serif text-amber-500 m-4 text-2xl font-bold">
+                    Seruput.
+                </h3>
+
+                <!-- MENU DESKTOP -->
+                <nav class="hidden md:flex m-4 text-white gap-4">
+                    <a href="#Beranda">Beranda</a>
+                    <a href="#Tentang">Tentang</a>
+                    <a href="#Kontak">Kontak</a>
+                    <a class="bg-amber-500 text-black py-1 px-3 rounded-full" href="#Daftar">Daftar</a>
+                </nav>
+
+                <!-- HAMBURGER MOBILE -->
+                <details class="md:hidden text-white m-4 relative">
+
+                    <summary class="cursor-pointer text-2xl list-none">
+                        ☰
+                    </summary>
+
+                    <nav class="absolute right-0 top-10 bg-black p-4 rounded-lg w-40">
+                        <a class="block py-2" href="#Beranda">Beranda</a>
+                        <a class="block py-2" href="#Tentang">Tentang</a>
+                        <a class="block py-2" href="#Kontak">Kontak</a>
+                        <a class="block bg-amber-500 text-black py-2 px-3 rounded-full mt-2" href="#Daftar">
+                            Daftar
+                        </a>
+                    </nav>
+
+                </details>
+
+            </div>
+
+            <div id="Beranda" class="bg-amber-500 text-center">
+                <h1 class="font-serif text-5xl pt-9 font-bold">
+                    Seruput: Workshop Barista Makassar
+                </h1>
+
+                <p class="text-amber-900 font-medium pb-10 pt-4">
+                    Dari biji kopi sampai eduhan sempurna, belajar langsung dari barista.
+                </p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="relative">
+        <img class="w-full h-[600px] object-cover" src="https://images.unsplash.com/photo-1762754105061-8082763619e6?auto=format&fit=crop&w=1600&q=80" alt="GambarHalamanUtama">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute top-20 left-20 tracking-wide  ">
+            <p class="font-medium text-amber-500 leading-15">
+                BATCH BARU • OKTOBER 2026
+            </p>
+            <div class="text-white">
+                <h1 class="font-serif font-bold text-5xl leading-15">
+                    Jadi barista dalam <br> satu akhir pekan.
+                </h1>
+                <p class="mt-3">
+                    Belajar espresso, manual brew, dan latte art dari nol. Cocok untuk <br> mahasiswa, pemula, maupun yang ingin membuka usaha <br> kopi sendiri.
+                </p>
+            </div>
+            <div class="mt-7">
+                <button>
+                    <a class="bg-amber-500 font-bold py-4 px-6 rounded-full" href="#Daftar">Daftar Sekarang</a>
+                </button>
+                <button>
+                    <a class="border-2 text-white py-3 px-2 rounded-full" href="#Tentang">Pelajari Lebih Lanjut</a>
+                </button>
+            </div>
+
+            <div class="mt-14 grid grid-cols-3 divide-x divide-gray-500 max-w-lg gap-4"> 
+                <div>
+                    <p class="text-amber-400 md:text-4xl font-bold lan">
+                        500+
+                    </p>
+                    <p class="text-white">
+                        Alumni
+                    </p>
+                </div>
+                <div>
+                    <p class="text-amber-400 md:text-4xl font-bold">
+                        12
+                    </p>
+                    <p class="text-white">
+                        Mentor
+                    </p>
+                </div>
+                <div>
+                    <p class="text-amber-400 md:text-4xl font-bold">
+                        4,9
+                    </p>
+                    <p class="text-white">
+                        Rating
+                    </p>
+                </div>      
+            </div>
+        </div> 
+    </section>
+
+    <section id="Tentang" class="bg-amber-50">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img
+                        class="w-full h-80 md:h-96 object-cover rounded-3xl shadow-xl" src="https://images.unsplash.com/photo-1746933117276-a5520d0f6aae?auto=format&fit=crop&w=1000&q=80" alt="gambar barista">
+                </div>
+                <div>
+                    <p class="text-amber-700 font-semibold tracking-widest text-sm">
+                        TENTANG SERUPUT
+                    </p>
+                    <h2 class="mt-2 font-serif text-3xl md:text-5xl font-bold text-gray-900">
+                        Belajar kopi tanpa ribet.
+                    </h2>
+                    <p class="mt-5 text-gray-600 leading-relaxed">
+                        Seruput adalah komunitas dan workshop barista di Makassar.
+                        Kami percaya secangkir kopi yang enak lahir dari teknik
+                        yang benar, bukan dari alat yang mahal.
+                    </p>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Setiap sesi dibuat singkat, praktis, dan langsung praktik.
+                        Peserta pulang membawa keterampilan yang bisa dipakai untuk
+                        usaha, kerja part-time, atau sekadar menyeduh lebih baik di rumah.
+                    </p>
+                    <ul class="mt-6 space-y-2 text-gray-700">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                            Kelas kecil, maksimal 12 peserta
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                            Semua alat dan bahan disediakan
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                            Tanpa pengalaman pun boleh ikut
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDAFTARAN -->
+    <section id="Daftar" class="bg-black text-white py-16 md:py-24 px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+        
+        <div class="w-full max-w-xl mx-auto px-4 lg:col-start-2">
+            <div class="bg-amber-50 border border-gray-300 rounded-3xl p-8 shadow-lg text-black">
+                <form class="space-y-5">
+                    <div>
+                        <label for="nama" class="font-medium">
+                            Nama Lengkap
+                        </label>
+                        <input id="nama" name="nama" type="text" placeholder="Nama Lengkap" class="w-full border border-gray-300 rounded-xl px-5 py-4">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="email" class="font-medium">
+                                Email
+                            </label>
+                            <input id="email" name="email" type="email" placeholder="Email@gmail.com" class="w-full border border-gray-300 rounded-xl px-5 py-4">
+                        </div>
+
+                        <div>
+                            <label for="whatsapp" class="font-medium">
+                                No. WhatsApp
+                            </label>
+                            <input id="whatsapp" name="whatsapp" type="tel" placeholder="08xxxxxxxxxx" class="w-full border border-gray-300 rounded-xl px-5 py-4">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="kelas" class="font-medium">
+                            Pilih Kelas
+                        </label>
+                        <select id="kelas" name="kelas" class="w-full border border-gray-300 rounded-xl px-5 py-4">
+                            <option>Espresso & Latte Art</option>
+                            <option>Manual Brew</option>
+                            <option>Paket Lengkap</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="pesan">Pesan (opsional)</label>
+                        <input id="pesan" name="pesan" type="text" placeholder="Tulis pertanyaan atau kebutuhanmu" class="w-full border border-gray-300 rounded-xl px-5 py-4">
+                    </div>
+
+                    <button class="font-medium bg-amber-500 py-2 px-3 rounded-full text-black" type="submit">
+                        Daftar sekarang
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="space-y-5 lg:col-start-1 lg:row-start-1">
+            <p class="text-amber-500" >PENDAFTARAN</p>
+            <h1 class="font-serif text-5xl font-bold " >Amankan kursimu <br> sekarang.</h1>
+            <p>Kuota terbatas hanya 12 peserta per batch. <br> Isi formulir di samping dan tim kami akan menghubungimu <br> lewat WhatsApp dalam 1x24 jam.</p>
+
+            <div class="border-2 rounded-xl bg-gray-900 w-85">
+                <div class="p-3">
+                    <p class="font-medium text-amber-400 ">Biaya kelas</p>
+                    <h1 class=" text-2xl font-bold">Rp250.000</h1>
+                    <p>Sudah termasuk alat, bahan, dan sertifikat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black text-gray-600">
+        <div>
+            <footer>
+                <div class="flex justify-between border-t">
+                    <div>
+                        <p class="font-serif font-bold text-amber-500">
+                            Seruput.
+                        </p>
+                        <p class="text-gray-400">
+                            Workshop barista dan komunitas kopi di Makassar. <br> 
+                            Belajar, praktik, lalu seduh.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p id="Kontak" class="font-bold text-white">
+                            Kontak
+                        </p>
+                        <p class="text-gray-400">
+                            Jl. Onxy No. 12, Makassar <br>
+                            halo@seruput.id <br>
+                            +62 896-7278-8919
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-white">
+                            Ikuti Kami
+                        </p>
+                        <div  class="flex justify-between gap-5 text-gray-400">
+                            <p class="border rounded-3xl  py-2 px-3">
+                                Instagram
+                            </p>
+                            <p class="border rounded-3xl  py-2 px-3">
+                                TikTok
+                            </p>
+                            <P class="border rounded-3xl  py-2 px-3">
+                                YouTube
+                            </P>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t">
+                    <div class="flex justify-between">
+                        <p>
+                            © 2026 Seruput. Seluruh hak cipta dilindungi.
+                        </p>
+                        <p>
+                            Foto oleh Syauqy Ayyash, Brooke Balentine, Sadia Alam, dan Kaylee Stoll di Unsplash.
+                        </p>
+                        <nav>
+                            <a href="">Kebijakan Privasi</a>
+                            <a href="">Syarat & Ketentuan</a>
+                        </nav>
+    
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+</html>
