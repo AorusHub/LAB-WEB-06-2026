@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web://dino</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <div id="game" class="relative w-full h-145 bg-sky-900 overflow-hidden">
+
+    <button id="startGame" onclick="startGame()" class="absolute bottom-50 left-1/2 -translate-x-1/2 text-xl font-bold bg-blue-500 text-white rounded-lg active:bg-black">
+      START GAME
+    </button>
+
+    <div id="dino" class="absolute bottom-8 left-20 text-6xl transition-transform duration-300 scale-x-[-1] z-2">
+      🦖
+    </div>
+
+    <div id="cactus" class="absolute bottom-8 right-20 text-5xl z-1">
+      🌵
+    </div>
+
+    <div id="ground" class="absolute bottom-6 left-0 w-full h-1 bg-black"></div>
+
+<!-- ======== gameOver ======== -->
+    <div id="gameOver" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white">
+
+      <h1 class="text-4xl font-bold">
+        GAME OVER
+      </h1>
+
+      <button id="tryAgain" onclick="tryAgainClick()" class="mt-4 px-5 py-2 bg-white text-black rounded-lg">
+        TRY AGAIN
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    const dino = document.getElementById("dino");
+    const cactus = document.getElementById("cactus");
+    const gameOver = document.getElementById("gameOver");
+    const startButton = document.getElementById("startGame");
+    const game = document.getElementById("game");
+
+    let jumping = false;
+    let gameRunning = false;
+    let tryCount = 0;
+
+// ======== jump ========
+    function jump() {
+
+      if (jumping || !gameRunning) {
+        return;
+      }
+      else {
+        jumping = true;
+
+        dino.classList.add("-translate-y-20");
+
+        setTimeout(function() {
+          dino.classList.remove("-translate-y-20");
+          jumping = false;
+          }, 500);
+      }
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.code === "Space") {
+        jump();
+      }
+    });
+
+    document.addEventListener("click", function(event) {
+      if (event.target.id === "tryAgain") {
+        return;
+      }
+
+      jump();
+    });
+
+// ======== moveCactus ========
+    let cactusPosition = 100;
+
+    function moveCactus() {
+
+      let move = setInterval(function() {
+        if (!gameRunning) {
+          return;
+        }
+
+        else {
+          cactusPosition -= 2;
+          cactus.style.left = cactusPosition + "%";
+
+          checkCollision();
+
+          if (cactusPosition < -10) {
+            cactusPosition = 100;
+          }
+        }
+
+      }, 20);
+
+    }
+
+    moveCactus();
+
+// ======== checkCollision ========
+    function checkCollision() {
+      let dinoBox = dino.getBoundingClientRect();
+      let cactusBox = cactus.getBoundingClientRect();
+
+      if (
+        dinoBox.right > cactusBox.left &&
+        dinoBox.left < cactusBox.right &&
+        dinoBox.bottom > cactusBox.top &&
+        dinoBox.top < cactusBox.bottom 
+      ) {
+        gameRunning = false;
+        gameOver.classList.remove("hidden");
+      }
+    }
+
+// ======== tryAgainClick ========
+    function tryAgainClick() {
+      tryCount++;
+
+      if (tryCount === 2) {
+        window.location.href = "glitch.html";
+      }
+
+      gameRunning = true;
+      gameOver.classList.add("hidden");
+
+      cactusPosition = 100;
+      cactus.style.left = "100%"
+
+    }
+
+// ======== tryAgainClick ========
+    function startGame() {
+      gameRunning = true;
+      startButton.classList.add("hidden");
+      game.classList.add("bg-sky-300");
+      return gameRunning;
+    }
+
+  </script>
+
+</body>
+</html>
