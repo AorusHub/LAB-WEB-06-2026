@@ -1,0 +1,133 @@
+@reference './index.css';
+
+/* ---------- Layout dasar ---------- */
+.app {
+  @apply min-h-screen;
+}
+
+.app-main {
+  @apply mx-auto w-full max-w-5xl px-5 sm:px-8;
+}
+
+.section {
+  @apply scroll-mt-20 py-16 md:py-24;
+}
+
+.section-title {
+  @apply mb-8 font-display text-3xl font-extrabold tracking-tight md:text-4xl;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  @apply sticky top-0 z-10 border-b border-mist bg-paper/90 backdrop-blur;
+}
+
+.navbar-inner {
+  @apply mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-5 py-3 sm:px-8;
+}
+
+.navbar-logo {
+  @apply font-display text-lg font-extrabold tracking-tight;
+}
+
+.navbar-menu {
+  @apply flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium text-muted;
+}
+
+.navbar-link {
+  @apply py-1 transition-colors hover:text-cobalt;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  @apply flex flex-col-reverse items-center gap-10 py-14 md:flex-row md:justify-between md:gap-16 md:py-24;
+}
+
+.hero-text {
+  @apply max-w-xl text-center md:text-left;
+}
+
+.hero-greeting {
+  @apply mb-2 text-lg text-muted;
+}
+
+.hero-name {
+  @apply font-display text-5xl leading-[1.02] font-extrabold tracking-tight md:text-7xl;
+}
+
+.hero-desc {
+  @apply mt-6 text-base leading-relaxed text-muted md:text-lg;
+}
+
+.hero-button {
+  @apply mt-8 cursor-pointer rounded-full bg-cobalt px-7 py-3 font-semibold text-paper transition-colors hover:bg-ink;
+}
+
+.hero-photo-wrap {
+  @apply relative shrink-0;
+}
+
+.hero-photo-wrap::before {
+  content: '';
+  @apply absolute top-4 left-4 h-full w-full rounded-[2rem] bg-amber;
+}
+
+.hero-photo {
+  @apply relative size-56 rounded-[2rem] object-cover sm:size-64 md:size-80;
+}
+
+/* ---------- About ---------- */
+.about-body {
+  @apply grid gap-10 md:grid-cols-2 md:gap-14;
+}
+
+.about-text {
+  @apply text-base leading-relaxed text-muted md:text-lg;
+}
+
+.about-list {
+  @apply divide-y divide-mist border-y border-mist;
+}
+
+.about-item {
+  @apply flex flex-col gap-1 py-3 sm:flex-row sm:justify-between sm:gap-6;
+}
+
+.about-label {
+  @apply text-sm text-muted;
+}
+
+.about-value {
+  @apply font-semibold;
+}
+
+/* ---------- Skills ---------- */
+.skills-list {
+  @apply flex flex-wrap gap-3;
+}
+
+.skills-item {
+  @apply rounded-full bg-mist px-5 py-2 text-sm font-medium text-ink sm:text-base;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.gallery-card {
+  @apply overflow-hidden rounded-xl bg-white;
+}
+
+.gallery-img {
+  @apply aspect-4/3 w-full object-cover;
+}
+
+.gallery-caption {
+  @apply px-4 py-3 text-sm font-medium;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  @apply mt-8 border-t border-mist px-5 py-8 text-center text-sm text-muted;
+}
