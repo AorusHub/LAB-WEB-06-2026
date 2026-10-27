@@ -1,0 +1,61 @@
+.game {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: skyblue;
+  overflow: hidden;
+}
+
+.game:active .dino {
+  animation: jump 1s ease-in-out;
+  /* bottom: 150px; */
+}
+
+.dino {
+  position: absolute;
+  bottom: 30px;
+  left: 100px;
+  font-size: 50px;
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 30px;
+  left: 100%;
+  font-size: 40px;
+  animation: moveCactus 3s linear infinite;
+  z-index: 1;
+}
+
+.ground {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: black;
+}
+
+@keyframes moveCactus {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -50%;
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+    bottom: 30px;
+  }
+  25% {
+    bottom: 60px;
+  }
+  50% {
+    bottom: 90px;
+  }
+}

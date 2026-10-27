@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>birthday.exe</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#f8f3e7] min-h-screen overflow-hidden font-mono text-black">
+
+  <!--======== HOME ========-->
+  <div id="home" class="h-screen relative overflow-hidden p-4 md:p-7">
+
+    <div class="absolute top-4 left-4 md:left-8 text-3xl rotate-[-10deg]">⭐</div>
+    <div class="absolute top-16 right-6 text-4xl rotate-12">🎈</div>
+    <div class="absolute bottom-8 left-7 text-4xl rotate-[-8deg]">🎂</div>
+    <div class="absolute bottom-12 right-8 text-3xl">✦</div>
+
+    <div class="h-full max-w-6xl mx-auto flex items-center justify-center">
+
+      <div class="w-full max-w-5xl bg-white border-4 border-black shadow-[10px_10px_0px_#facc15] rotate-[-1deg]">
+
+        <!--======== fake browser bar========-->
+        <div class="border-b-4 border-black px-4 py-3 flex items-center justify-between bg-[#ffe36e]">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 bg-black rounded-full"></div>
+            <div class="w-3 h-3 bg-black rounded-full"></div>
+            <div class="w-3 h-3 bg-black rounded-full"></div>
+          </div>
+
+          <p class="text-[10px] md:text-xs font-black tracking-widest">
+            BIRTHDAY-WEBSITE.EXE
+          </p>
+
+          <div class="text-xs">↗</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-0">
+
+          <!-- left card -->
+          <div class="p-5 md:p-8 border-b-4 md:border-b-0 md:border-r-4 border-black bg-[#fff8dc]">
+
+            <div class="border-4 border-black bg-[#facc15] p-3 rotate-[-3deg] shadow-[5px_5px_0px_#000]">
+              <div class="text-center text-5xl md:text-7xl py-5">
+                🎂
+              </div>
+            </div>
+
+            <div class="mt-7 border-4 border-black p-4 bg-white rotate-[1deg]">
+              <p class="text-[10px] font-black mb-2">STATUS</p>
+              <p class="text-sm font-black">🥳 ANOTHER YEAR UNLOCKED</p>
+              <p class="text-sm font-black">⭐ FRIENDSHIP STATUS: ACTIVE</p>
+              <p class="text-sm font-black">🎂 AGE: +1 UNLOCKED</p>
+            </div>
+
+          </div>
+
+          <!-- right side -->
+          <div class="p-6 md:p-9 flex flex-col justify-center">
+
+            <p class="text-xs font-black mb-3">
+              🎉 BIRTHDAY CELEBRATION // START
+            </p>
+
+            <h1 class="text-5xl md:text-7xl font-black leading-[0.85] tracking-[-0.08em]">
+              HAPPY<br>
+              BIRTHDAY!!!
+            </h1>
+
+            <p class="mt-5 text-sm md:text-base leading-6 max-w-md">
+              another year has been unlocked.
+              <br>
+              a small birthday page made to celebrate another year of you.
+            </p>
+
+            <button onclick="startGame()"
+              class="mt-7 self-start bg-black text-white px-7 py-4 border-4 border-black shadow-[5px_5px_0px_#facc15] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition">
+              START THE CELEBRATION →
+            </button>
+
+            <div class="mt-7 flex flex-wrap gap-2 text-[10px] font-black">
+              <span class="border-2 border-black px-2 py-1">BESTIE EDITION</span>
+              <span class="border-2 border-black px-2 py-1">BIRTHDAY EDITION</span>
+              <span class="border-2 border-black px-2 py-1">MADE WITH CARE</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="border-t-4 border-black px-4 py-2 flex justify-between text-[9px] font-black bg-black text-white">
+          <span>made for a special day</span>
+          <span>2026 // birthday build</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--======== GAME ========-->
+  <div id="game" class="hidden h-screen bg-[#111111] text-white relative overflow-hidden p-5">
+
+    <div class="max-w-5xl mx-auto h-full flex flex-col justify-center items-center text-center">
+
+      <p class="text-xs text-yellow-300">MINI GAME 01</p>
+
+      <h1 class="text-4xl md:text-6xl font-black mt-2">CATCH THE CAKES</h1>
+
+      <p class="text-xs mt-3 text-gray-400">
+        click all 5 to continue the celebration
+      </p>
+
+      <p id="score" class="mt-4 text-xl font-black text-yellow-300">
+        SCORE: 0 / 5
+      </p>
+
+      <button onclick="heartClick(this)" class="absolute top-[25%] left-[18%] text-4xl hover:scale-150 transition">🎂</button>
+      <button onclick="heartClick(this)" class="absolute top-[38%] right-[20%] text-4xl hover:scale-150 transition">🎉</button>
+      <button onclick="heartClick(this)" class="absolute bottom-[25%] left-[27%] text-4xl hover:scale-150 transition">🎂</button>
+      <button onclick="heartClick(this)" class="absolute bottom-[20%] right-[30%] text-4xl hover:scale-150 transition">🎁</button>
+      <button onclick="heartClick(this)" class="absolute top-[52%] left-[48%] text-4xl hover:scale-150 transition">🍰</button>
+
+    </div>
+  </div>
+
+
+  <!-- CHAOS -->
+  <div id="chaos" class="hidden h-screen bg-[#ffe36e] relative overflow-hidden p-5">
+
+    <div class="h-full flex items-center justify-center">
+
+      <div class="bg-white border-4 border-black shadow-[9px_9px_0px_#111111] max-w-2xl w-full p-6 md:p-9 rotate-[1deg]">
+
+        <p class="text-xs font-black">SYSTEM MESSAGE #0001</p>
+
+        <h1 class="text-5xl md:text-7xl font-black leading-none mt-3">
+          NICE! YOU FOUND THEM.
+        </h1>
+
+        <p class="mt-5 text-sm leading-6">
+          you found all the birthday icons.
+          <br>
+          that means the next part of the birthday page is unlocked.
+          <br>
+          one more step, then we continue.
+        </p>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 text-xs font-black">
+          <div class="border-4 border-black p-3 bg-[#fff8dc]">STATUS: ALIVE</div>
+          <div class="border-4 border-black p-3 bg-[#facc15]">CHAOS: 100%</div>
+        </div>
+
+        <button onclick="showStats()"
+          class="mt-7 bg-black text-white px-7 py-3 border-4 border-black">
+          UNLOCK BIRTHDAY DATA →
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--======== LIFE IN NUMBERS ========-->
+  <div id="stats" class="hidden h-screen bg-[#f8f3e7] overflow-y-auto p-5 md:p-8">
+
+    <div class="max-w-6xl mx-auto py-4">
+
+      <div class="flex flex-wrap items-end justify-between gap-3 mb-6">
+        <div>
+          <p class="text-xs font-black">BIRTHDAY DATA // FILE 01</p>
+          <h1 class="text-4xl md:text-6xl font-black leading-none mt-2">LIFE IN NUMBERS</h1>
+        </div>
+        <span class="border-4 border-black bg-yellow-300 px-3 py-2 text-xs font-black">VERY SCIENTIFIC*</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+
+        <div class="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_#facc15]"><p class="text-2xl">❤️</p><p class="text-2xl font-black mt-2">701,550,720</p><p class="text-[10px]">HEARTBEATS</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">💨</p><p class="text-2xl font-black mt-2">159,897,600</p><p class="text-[10px]">BREATHS TAKEN</p></div>
+        <div class="bg-[#ffe36e] border-4 border-black p-4 rotate-[1deg]"><p class="text-2xl">😴</p><p class="text-2xl font-black mt-2">55,520</p><p class="text-[10px]">HOURS SLEPT</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">🚶</p><p class="text-2xl font-black mt-2">45,110,000</p><p class="text-[10px]">STEPS WALKED</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">🍕</p><p class="text-2xl font-black mt-2">874</p><p class="text-[10px]">PIZZA SLICES</p></div>
+        <div class="bg-[#facc15] border-4 border-black p-4"><p class="text-2xl">🗣️</p><p class="text-2xl font-black mt-2">111,040,000</p><p class="text-[10px]">WORDS SPOKEN</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">📸</p><p class="text-2xl font-black mt-2">26,600</p><p class="text-[10px]">PHOTOS TAKEN</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">🔍</p><p class="text-2xl font-black mt-2">27,740</p><p class="text-[10px]">GOOGLE SEARCHES</p></div>
+        <div class="bg-[#ffe36e] border-4 border-black p-4"><p class="text-2xl">😂</p><p class="text-2xl font-black mt-2">104,100</p><p class="text-[10px]">TIMES LAUGHED</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">🌙</p><p class="text-2xl font-black mt-2">6,940</p><p class="text-[10px]">SUNSETS WITNESSED</p></div>
+        <div class="bg-white border-4 border-black p-4"><p class="text-2xl">🌕</p><p class="text-2xl font-black mt-2">235</p><p class="text-[10px]">FULL MOONS SEEN</p></div>
+        <div class="bg-black text-white border-4 border-black p-4"><p class="text-2xl">🌍</p><p class="text-2xl font-black mt-2">19.00</p><p class="text-[10px]">ORBITS AROUND SUN</p></div>
+
+      </div>
+
+      <div class="mt-6 flex justify-end">
+        <button onclick="showLikes()" class="bg-black text-white px-6 py-3 border-4 border-black shadow-[4px_4px_0px_#facc15]">OKAY THAT'S ENOUGH DATA →</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--======== THINGS I LIKE ========-->
+  <div id="likes" class="hidden h-screen bg-[#111111] text-white overflow-y-auto p-5">
+
+    <div class="max-w-5xl mx-auto h-full py-8">
+
+      <p class="text-xs text-yellow-300">BIRTHDAY DATA // FILE 02</p>
+      <h1 class="text-4xl md:text-6xl font-black mt-2">THINGS I LIKE</h1>
+      <p class="text-sm text-gray-400 mt-3">a few things that make this friendship special.</p>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-7">
+
+        <button onclick="openLike(1)" class="text-left bg-white text-black border-4 border-yellow-300 p-5 hover:-translate-y-1 transition">
+          <p class="text-3xl">😂</p>
+          <h2 class="font-black text-2xl mt-3">YOUR HUMOR</h2>
+          <p class="text-xs mt-2">the kind of humor that makes ordinary moments memorable.</p>
+        </button>
+
+        <button onclick="openLike(2)" class="text-left bg-[#ffe36e] text-black border-4 border-white p-5 hover:translate-x-1 transition">
+          <p class="text-3xl">🌀</p>
+          <h2 class="font-black text-2xl mt-3">YOUR RANDOMNESS</h2>
+          <p class="text-xs mt-2">selalu ada cerita baru di setiap kesempatan.</p>
+        </button>
+
+        <button onclick="openLike(3)" class="text-left bg-white text-black border-4 border-yellow-300 p-5 hover:-translate-y-1 transition">
+          <p class="text-3xl">⭐</p>
+          <h2 class="font-black text-2xl mt-3">THE LITTLE THINGS</h2>
+          <p class="text-xs mt-2">hal kecil yang mungkin kamu sendiri tidak sadar.</p>
+        </button>
+
+        <button onclick="openLike(4)" class="text-left bg-[#facc15] text-black border-4 border-white p-5 hover:translate-x-1 transition">
+          <p class="text-3xl">🤝</p>
+          <h2 class="font-black text-2xl mt-3">BESTIE STATUS</h2>
+          <p class="text-xs mt-2">grateful for the friendship and all the memories along the way.</p>
+        </button>
+
+      </div>
+
+      <div class="mt-6 text-right">
+        <button onclick="showLetter()" class="bg-yellow-300 text-black px-6 py-3 border-4 border-yellow-300 font-black">OPEN THE MESSAGE →</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--======== POPUP ========-->
+  <div id="likePopup" class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-5">
+    <div class="bg-white text-black border-4 border-black shadow-[8px_8px_0px_#facc15] max-w-md w-full p-6 rotate-[-1deg]">
+      <p class="text-xs font-black">UNLOCKED THOUGHT</p>
+      <h2 id="likeTitle" class="text-3xl font-black mt-2"></h2>
+      <p id="likeText" class="text-sm leading-6 mt-4"></p>
+      <button onclick="closeLike()" class="mt-6 bg-black text-white px-5 py-3 border-4 border-black">CLOSE</button>
+    </div>
+  </div>
+
+
+  <!--======== LETTER ========-->
+  <div id="letter" class="hidden h-screen bg-[#f8f3e7] overflow-y-auto p-5">
+
+    <div class="h-full flex items-center justify-center">
+
+      <div class="bg-white max-w-2xl w-full border-4 border-black shadow-[9px_9px_0px_#facc15] p-6 md:p-8 rotate-[1deg]">
+
+        <div class="border-b-4 border-black pb-4">
+          <p class="text-xs">📩 NEW MESSAGE</p>
+          <h1 class="text-4xl md:text-5xl font-black mt-2">YOU GOT MAIL.</h1>
+          <p class="text-[10px] text-gray-500 mt-2">from: someone who is happy to celebrate this day with you</p>
+        </div>
+
+        <div class="border-2 border-dashed border-gray-400 mt-5 p-5 text-sm leading-7">
+          <p>happy birthday! 🎂</p>
+
+          <p class="mt-4">
+            another year, another collection of memories, lessons, and moments worth keeping.
+          </p>
+
+          <p class="mt-4">
+            thank you for the conversations, laughter, shared stories, and all the little moments
+            that have made this friendship meaningful.
+          </p>
+
+          <p class="mt-4">
+            i hope this year brings you good days, new experiences, things to be proud of,
+            and plenty of reasons to smile.
+          </p>
+
+          <p class="mt-4">
+            keep being yourself, keep growing, and enjoy every new chapter that comes your way.
+          </p>
+
+          <p class="font-black mt-5">happy birthday & here’s to another great year 🎂</p>
+        </div>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="text-[10px] border-2 border-black px-2 py-1">🎂 +1 YEAR</span>
+          <span class="text-[10px] border-2 border-black px-2 py-1 bg-yellow-300">🥳 ANOTHER YEAR</span>
+          <span class="text-[10px] border-2 border-black px-2 py-1">⭐ FRIENDSHIP STATUS</span>
+        </div>
+
+        <div class="text-center mt-6">
+          <button onclick="showContact()" class="bg-black text-white px-7 py-3 border-4 border-black shadow-[4px_4px_0px_#facc15]">
+            OKAY, ONE LAST THING →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTACT -->
+  <div id="contact" class="hidden h-screen bg-[#111111] text-white overflow-y-auto p-5">
+
+    <div class="max-w-4xl mx-auto py-8">
+
+      <div class="flex items-center justify-between gap-4 mb-7">
+        <div>
+          <p class="text-xs text-yellow-300">MESSAGE BOARD</p>
+          <h1 class="text-4xl md:text-6xl font-black leading-none mt-2">LEAVE A MESSAGE 💬</h1>
+        </div>
+        <div class="hidden md:block text-5xl rotate-12">📨</div>
+      </div>
+
+      <p class="text-sm text-gray-400 max-w-xl mb-7">
+        kalau ingin meninggalkan pesan, tulis di sini. ✨
+      </p>
+
+      <form onsubmit="return false" class="grid md:grid-cols-2 gap-4">
+
+        <div class="bg-white text-black border-4 border-yellow-300 p-4">
+          <label class="block text-xs font-black mb-2">NAMA</label>
+          <input type="text" placeholder="nama kamu..." class="w-full border-4 border-black px-3 py-3 outline-none">
+        </div>
+
+        <div class="bg-white text-black border-4 border-yellow-300 p-4 rotate-[1deg]">
+          <label class="block text-xs font-black mb-2">EMAIL</label>
+          <input type="email" placeholder="email kamu..." class="w-full border-4 border-black px-3 py-3 outline-none">
+        </div>
+
+        <div class="md:col-span-2 bg-white text-black border-4 border-yellow-300 p-4">
+          <label class="block text-xs font-black mb-2">PESAN</label>
+          <textarea rows="5" placeholder="tulis pesanmu di sini..." class="w-full border-4 border-black px-3 py-3 outline-none resize-none"></textarea>
+        </div>
+
+        <button type="button" class="md:col-span-2 bg-yellow-300 text-black border-4 border-yellow-300 px-5 py-4 font-black hover:bg-white hover:border-white transition">
+          SEND MESSAGE 🎉
+        </button>
+
+      </form>
+
+      <div class="mt-7 flex justify-end">
+        <button onclick="showEnd()" class="bg-white text-black px-6 py-3 border-4 border-white font-black">
+          CONTINUE → 🎂
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ENDING -->
+  <div id="ending" class="hidden h-screen bg-yellow-300 text-black relative overflow-hidden">
+
+    <div id="balloons" class="absolute inset-0 pointer-events-none"></div>
+
+    <div id="cake" class="hidden absolute inset-0 flex items-center justify-center">
+      <div class="text-center">
+        <div id="candle" class="text-5xl opacity-0">🕯️</div>
+        <div class="text-8xl">🎂</div>
+
+        <h1 id="happy" class="hidden text-4xl md:text-7xl font-black mt-5 rotate-2">
+          HAPPY BIRTHDAY!!!
+        </h1>
+
+        <p id="finalText" class="hidden text-sm mt-5">
+          okay. now you can go. 😭
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+    let score = 0
+
+    function hideAll(){
+
+      document.getElementById("home").classList.add("hidden")
+      document.getElementById("game").classList.add("hidden")
+      document.getElementById("chaos").classList.add("hidden")
+      document.getElementById("stats").classList.add("hidden")
+      document.getElementById("likes").classList.add("hidden")
+      document.getElementById("letter").classList.add("hidden")
+      document.getElementById("contact").classList.add("hidden")
+      document.getElementById("ending").classList.add("hidden")
+
+    }
+
+
+    function startGame(){
+      hideAll()
+      document.getElementById("game").classList.remove("hidden")
+    }
+
+
+    function heartClick(btn){
+
+      btn.classList.add("hidden")
+      score++
+
+      document.getElementById("score").innerText =
+        "SCORE: " + score + " / 5"
+
+      if(score >= 5){
+
+        setTimeout(function(){
+          hideAll()
+          document.getElementById("chaos").classList.remove("hidden")
+        },500)
+
+      }
+    }
+
+
+    function showStats(){
+      hideAll()
+      document.getElementById("stats").classList.remove("hidden")
+    }
+
+
+    function showLikes(){
+      hideAll()
+      document.getElementById("likes").classList.remove("hidden")
+    }
+
+
+    function openLike(n){
+
+      document.getElementById("likePopup").classList.remove("hidden")
+
+      if(n == 1){
+        document.getElementById("likeTitle").innerText = "YOUR HUMOR"
+        document.getElementById("likeText").innerText = "the kind of humor that makes ordinary moments memorable."
+      }
+
+      if(n == 2){
+        document.getElementById("likeTitle").innerText = "YOUR RANDOMNESS"
+        document.getElementById("likeText").innerText = "selalu ada cerita baru di setiap kesempatan."
+      }
+
+      if(n == 3){
+        document.getElementById("likeTitle").innerText = "THE LITTLE THINGS"
+        document.getElementById("likeText").innerText = "hal kecil yang mungkin kamu sendiri tidak sadar."
+      }
+
+      if(n == 4){
+        document.getElementById("likeTitle").innerText = "BESTIE STATUS"
+        document.getElementById("likeText").innerText = "grateful for the friendship and all the memories along the way."
+      }
+    }
+
+
+    function closeLike(){
+      document.getElementById("likePopup").classList.add("hidden")
+    }
+
+
+    function showLetter(){
+      hideAll()
+      document.getElementById("letter").classList.remove("hidden")
+    }
+
+
+    function showContact(){
+      hideAll()
+      document.getElementById("contact").classList.remove("hidden")
+    }
+
+
+    function showEnd(){
+
+      hideAll()
+      document.getElementById("ending").classList.remove("hidden")
+
+      document.getElementById("cake").classList.add("hidden")
+      document.getElementById("candle").classList.add("opacity-0")
+      document.getElementById("happy").classList.add("hidden")
+      document.getElementById("finalText").classList.add("hidden")
+
+      setTimeout(function(){
+        document.getElementById("cake").classList.remove("hidden")
+      },700)
+
+      setTimeout(function(){
+        document.getElementById("candle").classList.remove("opacity-0")
+      },1400)
+
+      setTimeout(function(){
+        document.getElementById("happy").classList.remove("hidden")
+      },2200)
+
+      setTimeout(function(){
+        document.getElementById("finalText").classList.remove("hidden")
+      },3000)
+
+      for(let i = 0; i < 15; i++){
+
+        setTimeout(function(){
+
+          let b = document.createElement("div")
+
+          b.innerText = ["🎈","🎉","⭐","🎁"][Math.floor(Math.random()*4)]
+
+          b.className = "absolute text-4xl md:text-6xl bottom-[-80px]"
+          b.style.left = Math.random()*90 + "%"
+
+          document.getElementById("balloons").appendChild(b)
+
+          setTimeout(function(){
+            b.style.bottom = "110%"
+            b.style.transition = "all 5s linear"
+          },100)
+
+        }, i * 250)
+      }
+    }
+
+  </script>
+
+</body>
+</html>

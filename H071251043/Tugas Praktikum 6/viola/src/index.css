@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #22231f;
+  background: #a6a6a259;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.paper-lines {
+  background-color: #fbfaf5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 31px,
+    rgba(116, 145, 158, 0.16) 32px
+  );
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.24) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.24) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.tape {
+  position: absolute;
+  width: 64px;
+  height: 18px;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgba(221, 235, 255, 0.82);
+  border-left: 1px solid rgba(100, 130, 150, 0.15);
+  border-right: 1px solid rgba(100, 130, 150, 0.15);
+}
+
+.sticker {
+  box-shadow: 2px 3px 0 rgba(35, 35, 35, 0.12);
+  transform: rotate(-2deg);
+}
+
+.handwritten {
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+}
+
+.project-card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) rotate(-0.3deg);
+  box-shadow: 8px 10px 0 rgba(36, 54, 48, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

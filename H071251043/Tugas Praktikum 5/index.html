@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Marsha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 max-w-2xl mx-auto">
+
+  <h1 class="text-2xl font-bold mb-4">Tim Marsha</h1>
+
+  <!-- ANGGOTA -->
+  <p id="status-anggota" class="text-gray-500"></p>
+  <div id="daftar-anggota" class="flex flex-wrap gap-2 mb-6"></div>
+
+  <!-- TUGAS -->
+  <h2 id="judul-tugas" class="text-xl font-semibold">Pilih anggota</h2>
+  <p id="progres" class="text-gray-600 mb-2"></p>
+  <p id="status-tugas" class="text-gray-500"></p>
+
+  <input type="text" id="cari" placeholder="Cari tugas..."
+         class="border rounded p-2 w-full my-2">
+  <p id="kosong" class="hidden text-gray-500">Tidak ada tugas yang cocok.</p>
+  <ul id="daftar-tugas" class="space-y-2 mb-6"></ul>
+
+  <!-- FORM -->
+  <form id="form-tugas" class="flex gap-2">
+    <input type="text" id="input-judul" placeholder="Judul tugas baru"
+           class="border rounded p-2 flex-1">
+    <button type="submit" id="btn-simpan"
+            class="bg-blue-500 text-white px-4 rounded">Simpan</button>
+  </form>
+  <p id="error-form" class="text-red-500 mt-1"></p>
+  <p id="notif" class="hidden bg-green-100 text-green-700 p-2 rounded mt-2">
+    Tugas berhasil ditambahkan.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
