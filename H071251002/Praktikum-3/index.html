@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PainTrail</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#f8f1d8] text-[#2c1e16]">
+    <nav id="home" class="w-full bg-[#f8f1d8]/90 backdrop-blur-sm sticky top-0 z-50 px-6 py-4 md:px-12 lg:px-16 border-b border-[#c2b69d]/40">
+    <div class="flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-xl font-serif font-bold tracking-widest text-[#a34848]">PINE TRAIL</span>
+
+            <span class="font-serif text-[10px] uppercase tracking-wider text-stone-600 -mt-1">Outdoor Adventure & Camping</span>
+        </div>
+
+        <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-[#2c1e16]">
+            <a href="#home" class="font-serif hover:text-[#294f46] transition-colors">Home</a>
+            <a href="#about" class="font-serif hover:text-[#294f46] transition-colors">About</a>
+            <a href="#activities" class="font-serif hover:text-[#294f46] transition-colors">Activities</a>
+            <a href="#activities" class="font-serif hover:text-[#294f46] transition-colors">Trip</a>
+            <a href="#contact" class="font-serif hover:text-[#294f46] transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden md:block">
+            <a href="#contact"class="rounded-sm bg-[#984f4f] px-5 py-2 font-serif text-sm text-white transition hover:bg-[#783d3e] shadow-sm">
+                Book A Trip
+            </a>
+        </div>
+
+        <details class="relative md:hidden">
+            <summary class="cursor-pointer list-none text-2xl text-[#2c1e16]">
+                ☰
+            </summary>
+
+            <div class="absolute right-0 top-10 w-48 rounded-md border border-[#c2b69d]/40 bg-[#f8f1d8] p-5 shadow-lg">
+
+                <div class="flex flex-col gap-4 text-sm font-semibold text-[#2c1e16]">
+
+                    <a href="#home" class="font-serif hover:text-[#294f46] transition-colors">Home</a>
+                    <a href="#about" class="font-serif hover:text-[#294f46] transition-colors"> About</a>
+                    <a href="#activities" class="font-serif hover:text-[#294f46] transition-colors">Activities</a>
+                    <a href="#activities" class="font-serif hover:text-[#294f46] transition-colors">Trip</a>
+                    <a href="#contact" class="font-serif hover:text-[#294f46] transition-colors">Contact</a>
+                    <a href="#contact"class="rounded-sm bg-[#984f4f] px-5 py-2 text-center font-serif text-sm text-white transition hover:bg-[#783d3e] shadow-sm">Book A Trip
+                    </a>
+                </div>
+            </div>
+        </details>
+    </div>
+</nav>
+
+    <header class="relative flex min-h-[500px] items-center justify-center overflow-hidden bg-[#f8f1d8] md:min-h-[560px]">
+        <section class="relative w-full min-h-[580px] bg-cover bg-center px-4 bg-[url('images/hero.png')] flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#f8f1d8]/30 to-[#f8f1d8]"></div>
+            
+            <div class="relative z-10 mx-auto max-w-4xl px-5 py-16 text-center space-y-4">
+                <h1 class="text-4xl sm:text-6xl font-black text-[#2c1e16] tracking-tight leading-none uppercase drop-shadow-md">
+                    GET OUTSIDE <br> 
+                    <span class="font-['Playfair_Display'] italic capitalize text-[#a34848] font-normal">Take the</span> TRAIL
+                </h1>
+
+                <p class="text-xs sm:text-sm text-white max-w-xl mx-auto leading-relaxed font-serif drop-shadow-sm">
+                    Hiking, camping, and weekend trips for anyone
+                    who wants to spend more time outdoors.
+                    Discover hidden pine forests, mountain vistas,
+                    and field journal memories.
+                </p>
+
+                <div class="mt-7 flex flex-wrap justify-center gap-3 pt-2">
+                    <a href="#activities" class="font-serif bg-[#984f4f] px-6 py-3 text-sm text-white transition hover:bg-[#783d3d] uppercase shadow-sm border border-[#c2b69d]">Explore Activities</a>
+                    <a href="#contact" class="font-serif bg-[#294f46] px-6 py-3 text-sm text-white transition hover:bg-[#1d3932] uppercase shadow-sm border border-[#c2b69d]">Book A Trip</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="about" class="bg-[#f8f1d8] py-16 px-4 max-w-4xl mx-auto text-center space-y-8">
+            <div class="space-y-3">
+            <h2 class="font-serif text-4xl font-bold leading-tight text-[#984f4f] md:text-5xl">ABOUT PINE TRAIL</h2>
+            <p class="text-xs sm:text-sm text-[#2c1e16]/90 max-w-2xl mx-auto font-medium">
+                Pine Trail is an outdoor activity service for
+                people who want to spend a little more time
+                in nature. We organize simple and enjoyable
+                outdoor trips, from easy hikes and forest walks
+                to weekend camping.  
+            </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-center">
+                <div class="p-2">
+                    <h3 class="font-serif text-lg font-bold text-[#984f4f]">Made for Every Explorer</h3>
+                    <p class="text-xs font-serif text-stone-600 mt-1">Dirancang untuk pendaki pemula maupun yang berpengalaman.</p>
+                </div>
+                <div class="p-2">
+                    <h3 class="font-serif text-lg font-bold text-[#984f4f]">New Places to Discover</h3>
+                    <p class="text-xs font-serif text-stone-600 mt-1">Menjelajahi lokasi rahasia dan jalur pemandangan alami.</p>
+                </div>
+                <div class="p-2">
+                    <h3 class="font-serif text-lg font-bold text-[#984f4f]">Good Times Outdoor</h3>
+                    <p class="text-xs font-serif text-stone-600 mt-1">Ciptakan momen kebersamaan yang hangat di sekitar api unggun.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="py-16 px-6 md:px-12 lg:px-12 bg-[#DBD7AA]/60 border-y border-[#c2b69d]/50">
+            <div class="max-w-6xl mx-auto text-center space-y-2 mb-10">
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#984f4f] tracking-wide">CHOOSE YOUR ACTIVITY</h2>
+                <p class="font-serif text-xs text-[#2c1e16]/80 max-w-lg mx-auto">
+                    Select from our outdoor experiences carefully
+                    crafted for beginners and seasoned explorers alike.
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="bg-[#f8f1d8] p-4 border border-[#c2b69d] text-center flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <div class="aspect-[4/3] w-full overflow-hidden border border-[#c2b69d]">
+                            <img src="images/hiking.png" alt="Hiking Through mountain trails" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold font-serif text-[#2c1e16] tracking-wide">HIKING</h3>
+                        <p class="text-[11px] text-[#2c1e16]/80 leading-snug font-serif">
+                            Explore forels trails and enjoy 
+                            the views along the way.
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-block w-full border border-[#2c1e16] text-[#2c1e16] hover:bg-[#2c1e16] hover:text-[#f8f1d8] text-[10px] font-serif uppercase py-2 transition-colors">View Activity</a>
+                    </div>
+                </article>
+
+                <article class="bg-[#f8f1d8] p-4 border border-[#c2b69d] text-center flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <div class="aspect-[4/3] w-full overflow-hidden border border-[#c2b69d]">
+                            <img src="images/camping.png" alt="Camping in the mountain" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold font-serif text-[#2c1e16] tracking-wide">CAMPING</h3>
+                        <p class="text-[11px] text-[#2c1e16]/80 leading-snug font-serif">
+                            Spend a night outdoors with a prepared
+                            camping area and basic equipment.
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-block w-full border border-[#2c1e16] text-[#2c1e16] hover:bg-[#2c1e16] hover:text-[#f8f1d8] text-[10px] font-serif uppercase py-2 transition-colors">View Activity</a>
+                    </div>
+                </article>
+
+                <article class="bg-[#f8f1d8] p-4 border border-[#c2b69d] text-center flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <div class="aspect-[4/3] w-full overflow-hidden border border-[#c2b69d]">
+                            <img src="images/forest-walk.png" alt="Walking through a pine forest" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold font-serif text-[#2c1e16] uppercase tracking-wide">FOREST WALK</h3>
+                        <p class="text-[11px] text-[#2c1e16]/80 leading-snug font-serif">
+                            Take a relaxing walk through the forest
+                            and enjoy nature.
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-block w-full border border-[#2c1e16] text-[#2c1e16] hover:bg-[#2c1e16] hover:text-[#f8f1d8] text-[10px] font-serif uppercase py-2 transition-colors">View Activity</a>
+                    </div>
+                </article>
+
+                <article class="bg-[#f8f1d8] p-4 border border-[#c2b69d] text-center flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div class="space-y-3">
+                        <div class="aspect-[4/3] w-full overflow-hidden border border-[#c2b69d]">
+                            <img src="images/night-camp.png" alt="Friends enjoying a campfire at night" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold font-serif text-[#2c1e16] uppercase tracking-wide">NIGHT CAMP</h3>
+                        <p class="text-[11px] text-[#2c1e16]/80 leading-snug font-serif">
+                            Spend the evening around a campfire
+                            and enjoy the night outdoors.
+                        </p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-block w-full border border-[#2c1e16] text-[#2c1e16] hover:bg-[#2c1e16] hover:text-[#f8f1d8] text-[10px] font-serif uppercase py-2 transition-colors">View Activity</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 px-4 max-w-3xl mx-auto">
+            <div class="border border-[#c2b69d] bg-[#efe5c9]/40 p-8 md:p-12 text-center">
+                <div class="space-y-1 mb-8">
+                <h2 class="text-2xl font-serif font-bold sm:text-3xl text-[#984f4f] tracking-wide">READY TO GET LOST?</h2>
+                    <p class="text-xs text-[#2c1e16]/80 font-serif"> 
+                        Choose an activity and tell us when you'd
+                        like to go. We'll get back to you with the details.
+                    </p>
+                </div>
+
+                <form onsubmit="return false;" class="space-y-4 text-left">
+
+                    <!-- Nama dan Email -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block font-serif text-[10px] uppercase tracking-wider text-[#2c1e16] font-bold mb-1">
+                                Full Name
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="Kimi no nawa"
+                                class="w-full px-3 py-2 bg-[#f8f1d8] border border-[#c2b69d] focus:outline-none focus:border-[#984f4f] text-xs text-[#2c1e16]">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block font-serif text-[10px] uppercase tracking-wider text-[#2c1e16] font-bold mb-1">
+                                Email/Phone
+                            </label>
+                            <input type="text" id="email" name="email" placeholder="Your Contact"
+                                class="w-full px-3 py-2 bg-[#f8f1d8] border border-[#c2b69d] focus:outline-none focus:border-[#984f4f] text-xs text-[#2c1e16]">
+                        </div>
+                    </div>
+
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="activity" class="block font-serif text-[10px] uppercase tracking-wider text-[#2c1e16] font-bold mb-1">
+                                Choose an Activity
+                            </label>
+                            <select id="activity" name="activity"
+                                class="w-full px-3 py-2 bg-[#f8f1d8] border border-[#c2b69d] focus:outline-none focus:border-[#984f4f] text-xs text-[#2c1e16]">
+                                <option value="">Select an activity</option>
+                                <option value="hiking">Hiking</option>
+                                <option value="camping">Camping</option>
+                                <option value="forest-walk">Forest Walk</option>
+                                <option value="night-camp">Night Camp</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="date" class="block font-serif text-[10px] uppercase tracking-wider text-[#2c1e16] font-bold mb-1">
+                                Preferred Date
+                            </label>
+                            <input type="date" id="date" name="date"
+                                class="w-full px-3 py-2 bg-[#f8f1d8] border border-[#c2b69d] focus:outline-none focus:border-[#984f4f] text-xs text-[#2c1e16]">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block font-serif text-[10px] uppercase tracking-wider text-[#2c1e16] font-bold mb-1">
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more..."
+                            class="w-full px-3 py-2 bg-[#f8f1d8] border border-[#c2b69d] focus:outline-none focus:border-[#984f4f] text-xs text-[#2c1e16]"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="w-full bg-[#984f4f] hover:bg-[#783d3e] text-white font-serif text-xs uppercase tracking-widest py-3 transition-colors shadow-sm">
+                            SEND REQUEST
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#2c1e16] text-[#efe5c9] py-10 px-4 text-center text-xs space-y-4">
+        <h2 class="text-base font-bold tracking-widest text-[#a34848]">PINE TRAIL</h2>
+        <p class="text-[11px] text-[#efe5c9]/80 -mt-2">Outdoor Adventure & Camping</p>
+        <p class="text-xs italic text-[#efe5c9]/60">Explore more. Enjoy the outdoors</p>
+
+        <div class="flex justify-center space-x-6 text-[11px] text-[#efe5c9]/80 py-2">
+            <a href="#home" class="hover:underline">Home</a>
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#activities" class="hover:underline">Activities</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+
+        <p class="text-[11px] text-[#efe5c9]/70">Instagram: @pinetrail</p>
+        <p class="text-[10px] text-[#efe5c9]/50">&copy; 2026 Pine Trail. All rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-cream: #F7F4EB;
+  --color-navy: #1B2A4A;
+  --color-pink: #FF5E8E;
+  --color-yellow: #FFD000;
+  --color-card: #FFFFFF;
+  --color-muted: #4A5568;
+}
