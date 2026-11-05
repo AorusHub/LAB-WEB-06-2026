@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pantau Tugas Tim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amaranth: "#933B5B",
+            thulian: "#B5728A",
+            brook: "#AABAAE",
+            chalk: "#E3D6BF",
+            olive: "#9F9679",
+            ink: "#2E2A20"
+          },
+          fontFamily: { sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"] }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-chalk p-3 font-sans text-ink sm:p-5 lg:p-8">
+
+  <div class="mx-auto grid max-w-6xl overflow-hidden rounded-3xl shadow-xl md:min-h-[36rem] md:grid-cols-[15rem_1fr] lg:grid-cols-[18rem_1fr]">
+    <aside class="bg-olive p-5">
+      <h1 class="text-xl font-bold">Tim Marsha</h1>
+      <p class="text-sm">Pantau tugas harian anggota tim.</p>
+
+      <p id="status-anggota" class="mt-4 text-sm empty:hidden"></p>
+      <p id="error-anggota" class="hidden mt-4 rounded-xl border border-amaranth bg-white px-3 py-2 text-sm text-amaranth"></p>
+
+      <details open class="mt-4 md:[&::details-content]:[content-visibility:visible]">
+
+        <summary
+          class="flex cursor-pointer list-none items-center gap-3 rounded-xl bg-white px-3 py-2 font-semibold text-amaranth shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amaranth md:hidden [&::-webkit-details-marker]:hidden">
+          <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span>Daftar anggota</span>
+        </summary>
+
+        <h2 class="mb-3 mt-6 hidden text-xs font-semibold uppercase tracking-wider md:block">Anggota</h2>
+        <div id="daftar-anggota" class="mt-3 flex max-h-72 flex-col gap-1 overflow-y-auto md:mt-0 md:max-h-[26rem]"></div>
+      </details>
+    </aside>
+
+    <main class="min-w-0 bg-white p-5 sm:p-6 lg:p-8">
+      <h2 id="judul-tugas" class="text-xl font-bold text-amaranth sm:text-2xl">Tugas</h2>
+      <p id="petunjuk" class="mt-2 text-sm text-ink/70">Pilih salah satu anggota untuk melihat tugasnya.</p>
+
+      
+
+      <p id="status-tugas" class="mt-2 text-sm text-ink/70"></p>
+      <p id="error-tugas" class="hidden mt-2 rounded-xl border border-amaranth bg-amaranth/10 px-3 py-2 text-sm text-amaranth"></p>
+
+      <div id="panel-tugas" class="hidden">
+        <p id="ringkasan" class="mt-1 text-sm font-medium text-ink/70"></p>
+        <div class="mt-2 h-3 w-full rounded-full bg-chalk">
+          <div id="batang-progres" class="h-3 w-0 rounded-full bg-thulian transition-all duration-300"></div>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-chalk/40 p-4">
+            <label for="cari" class="block text-sm font-semibold">Cari tugas</label>
+            <input id="cari" type="text" placeholder="Ketik judul tugas..."
+              class="mt-2 w-full rounded-xl border border-brook bg-white px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amaranth">
+          </div>
+
+          <form id="form-tugas" class="rounded-2xl bg-chalk/40 p-4" novalidate>
+            <label for="judul-baru" class="block text-sm font-semibold">Tambah tugas baru</label>
+            <div class="mt-2 flex flex-col gap-2 sm:flex-row md:flex-col xl:flex-row">
+              <input id="judul-baru" type="text" placeholder="Judul tugas (min. 5 karakter)"
+                class="w-full min-w-0 rounded-xl border border-brook bg-white px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amaranth">
+              <button id="tombol-simpan" type="submit"
+                class="rounded-xl bg-amaranth px-5 py-2 text-sm font-semibold text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-amaranth focus:ring-offset-2">Simpan</button>
+            </div>
+            <p id="error-form" class="hidden mt-2 text-sm font-medium text-amaranth" role="alert"></p>
+          </form>
+        </div>
+
+        <ul id="daftar-tugas" class="mt-4 flex flex-col gap-2"></ul>
+        <p id="pesan-kosong" class="hidden py-4 text-sm text-ink/70"></p>
+      </div>
+    </main>
+  </div>
+
+  <div id="notifikasi" role="status"
+    class="hidden fixed bottom-4 right-4 rounded-xl bg-amaranth px-4 py-3 text-sm font-medium text-white shadow-lg"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
