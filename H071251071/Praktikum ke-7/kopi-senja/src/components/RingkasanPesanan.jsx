@@ -1,4 +1,4 @@
-function RingkasanPesanan({ pesanan, totalItem, totalHarga, onTambah, onKurang, onHapus }) {
+function RingkasanPesanan({ pesanan, totalItem, totalHarga, onTambah, onKurang, onHapus, onResetPesanan }) {
     return (
         <div className="bg-white p-5 rounded-xl shadow-sm border border-amber-100 space-y-4">
             <h2 className="text-lg font-bold text-amber-900 border-b pb-2">Ringkasan Pesanan</h2>
@@ -50,6 +50,14 @@ function RingkasanPesanan({ pesanan, totalItem, totalHarga, onTambah, onKurang, 
                     <span>Total Harga:</span> 
                     <span>Rp {totalHarga.toLocaleString('id-ID')}</span> 
                 </div>
+                <button
+                    type="button"
+                    onClick={onResetPesanan}
+                    disabled={pesanan.length === 0}
+                    className="w-full py-2 bg-rose-500 hover:bg-rose-600 disabled:cursor-not-allowed disabled:opacity-50 text-white rounded-lg font-bold text-sm shadow transition-colors"
+                >
+                    Hapus Pesanan
+                </button>
             </div>
         </div>
     );

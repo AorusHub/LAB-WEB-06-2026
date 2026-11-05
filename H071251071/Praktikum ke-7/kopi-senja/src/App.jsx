@@ -81,6 +81,7 @@ function App() {
             onTambah={handleTambahPesanan} 
             onKurang={handleKurangiPesanan} 
             onHapus={handleHapusPesanan}
+            onResetPesanan={handleResetPesanan}
           />
 
           <FormPesan 
