@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme inline { 
+    --color-awan: #9599a4;
+    --color-granit: #a69d97;
+    --color-gobelin: #d3b6a8;
+    --color-gurun: #ecc093;
+    --color-surya: #f8dda6;
+    --color-kertas: #f1f1ef;
+    --color-tinta: #3f4b53;
+    --font-judul: "Cormorant Garamond", "Noto Serif", Georgia, serif;
+    --font-isi: "Work Sans", "Segoe UI", system-ui, sans-serif;
+
+}
