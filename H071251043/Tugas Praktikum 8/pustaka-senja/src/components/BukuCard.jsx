@@ -6,14 +6,14 @@ export default function BukuCard({ buku, favorit, onToggleFavorit }) {
   const { id, judul, penulis, kategori, tahun, tersedia } = buku;
 
   return (
-    <div className="flex flex-col rounded-xl border border-amber-200 bg-amber-200 p-5 shadow-sm">
+    <div className="flex flex-col rounded-xl border border-slate-200 bg-slate-900 p-5 shadow-sm">
       <span className="text-xs font-semibold uppercase text-amber-700">
         {kategori}
       </span>
 
-      <h2 className="mt-1 text-lg font-bold text-amber-900">{judul}</h2>
-      <p className="text-sm text-gray-600">{penulis}</p>
-      <p className="text-sm text-gray-500">Terbit {tahun}</p>
+      <h2 className="mt-1 text-lg font-bold text-amber-400">{judul}</h2>
+      <p className="text-sm text-gray-400">{penulis}</p>
+      <p className="text-sm text-gray-400">Terbit {tahun}</p>
 
       <span
         className={
@@ -39,7 +39,7 @@ export default function BukuCard({ buku, favorit, onToggleFavorit }) {
 
         <Link
           href={`/katalog/${id}`}
-          className="text-sm font-medium text-amber-900 underline"
+          className="text-sm font-medium text-yellow-800 underline"
         >
           Lihat Detail
         </Link>

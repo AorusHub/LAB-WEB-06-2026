@@ -30,14 +30,14 @@ export default async function Detail({ params }) {
 
   return (
     <div>
-      <div className="rounded-xl border border-amber-200 bg-slate-200 p-8 shadow-sm">
+      <div className="rounded-xl border border-amber-200 bg-slate-900 p-8 shadow-sm">
         <span className="text-xs font-semibold uppercase text-amber-700">
           {buku.kategori}
         </span>
 
-        <h1 className="mt-1 text-3xl font-bold text-amber-900">{buku.judul}</h1>
-        <p className="mt-1 text-gray-600">oleh {buku.penulis}</p>
-        <p className="text-sm text-gray-500">Terbit tahun {buku.tahun}</p>
+        <h1 className="mt-1 text-3xl font-bold text-amber-600">{buku.judul}</h1>
+        <p className="mt-1 text-gray-400">oleh {buku.penulis}</p>
+        <p className="text-sm text-gray-400">Terbit tahun {buku.tahun}</p>
 
         <span
           className={
@@ -49,12 +49,12 @@ export default async function Detail({ params }) {
           {buku.tersedia ? "Tersedia" : "Sedang Dipinjam"}
         </span>
 
-        <h2 className="mt-6 text-lg font-semibold text-amber-900">Sinopsis</h2>
-        <p className="mt-2 leading-relaxed text-gray-700">{buku.sinopsis}</p>
+        <h2 className="mt-6 text-lg font-semibold text-amber-700">Sinopsis</h2>
+        <p className="mt-2 leading-relaxed text-gray-400">{buku.sinopsis}</p>
 
         <Link
           href="/katalog"
-          className="mt-6 inline-block rounded-lg border border-amber-900 px-5 py-2 text-amber-900 hover:bg-amber-50"
+          className="mt-6 inline-block rounded-lg border border-amber-900 px-5 py-2 text-amber-700 hover:bg-slate-300"
         >
           Kembali ke Katalog
         </Link>
@@ -81,7 +81,7 @@ export default async function Detail({ params }) {
               <Link
                 key={item.id}
                 href={`/katalog/${item.id}`}
-                className="rounded-xl border border-amber-200 bg-amber-200 p-4 hover:bg-amber-100"
+                className="rounded-xl border border-amber-200 bg-slate-300 p-4 hover:bg-slate-200"
               >
                 <p className="font-semibold text-amber-900">{item.judul}</p>
                 <p className="text-sm text-gray-600">{item.penulis}</p>

@@ -53,7 +53,7 @@ setErrors({});
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-amber-700">Usulan Buku</h1>
+      <h1 className="text-3xl font-bold text-amber-600">Usulan Buku</h1>
       <p className="mt-1 text-gray-400">
         Ada buku yang ingin dihadirkan di Pustaka Senja? Usulkan di sini.
       </p>
@@ -61,10 +61,10 @@ setErrors({});
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="mt-6 space-y-4 rounded-xl border border-amber-200 bg-white p-6 shadow-sm"
+        className="mt-6 space-y-4 rounded-xl border border-amber-200 bg-slate-200 p-6 shadow-sm"
       >
         <div>
-          <label className="block text-sm font-medium text-amber-900">
+          <label className="block text-sm font-medium text-amber-800">
             Nama Pengusul <span className="text-red-600">*</span>
           </label>
           <input
@@ -83,7 +83,7 @@ setErrors({});
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-amber-900">
+          <label className="block text-sm font-medium text-amber-800">
             Judul Buku yang Diusulkan <span className="text-red-600">*</span>
           </label>
           <input
@@ -95,7 +95,7 @@ setErrors({});
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-amber-900">
+          <label className="block text-sm font-medium text-amber-800">
             Kategori <span className="text-red-600">*</span>
           </label>
           <select
@@ -113,7 +113,7 @@ setErrors({});
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-amber-900">
+          <label className="block text-sm font-medium text-amber-800">
             Alasan Usulan <span className="text-red-600">*</span>
           </label>
           <textarea
@@ -138,7 +138,7 @@ setErrors({});
 
         <button
           type="submit"
-          className="rounded-lg bg-amber-900 px-5 py-2 text-white hover:bg-amber-800"
+          className="rounded-lg bg-amber-800 px-5 py-2 text-white hover:bg-amber-700"
         >
           Kirim Usulan
         </button>
