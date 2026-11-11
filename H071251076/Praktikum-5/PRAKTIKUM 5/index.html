@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantau Tugas Tim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-100 text-slate-800 min-h-screen">
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    <header class="mb-6">
+      <h1 class="text-2xl font-bold">Pantau Tugas Tim</h1>
+      <p class="text-slate-600">Pilih anggota untuk melihat tugas dan progresnya.</p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols">
+      <!-- Daftar anggota -->
+      <section aria-labelledby="judul-anggota" class="bg-white border border-stone-300 p-4 self-start">
+        <h2 id="judul-anggota" class="font-semibold mb-3">Anggota</h2>
+        <p id="status-anggota" class="text-sm text-slate-600 hidden"></p>
+        <div id="daftar-anggota" class="flex flex-col gap-2"></div>
+      </section>
+
+      <!-- Tugas anggota -->
+      <section aria-labelledby="judul-tugas" class="bg-white border border-stone-300 p-4">
+        <h2 id="judul-tugas" class="font-semibold text-lg mb-1">Tugas</h2>
+        <p id="ringkasan" class="text-sm text-slate-600 mb-3 hidden"></p>
+        <p id="status-tugas" class="text-sm text-slate-600 mb-3">Pilih anggota dari list.</p>
+
+        <div id="area-tugas" class="hidden">
+          <label for="cari" class="block text-sm font-medium mb-1">Cari tugas</label>
+          <input id="cari" type="search" placeholder="Ketik judul tugas..."
+            class="w-full border border-stone-300 px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+          <ul id="daftar-tugas" class="divide-y divide-stone-200"></ul>
+          <p id="pesan-kosong" class="text-sm text-slate-600 py-3 hidden"></p>
+
+          <form id="form-tugas" class="mt-5 pt-4 border-t border-stone-200" novalidate>
+            <label for="judul-baru" class="block text-sm font-medium mb-1">Tambah tugas baru</label>
+            <div class="flex gap-2">
+              <input id="judul-baru" type="text" placeholder="Judul tugas (minimal 5 karakter)"
+                class="flex-1 border border-stone-300  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+              <button id="tombol-simpan" type="submit"
+                class="bg-indigo-600 text-white  px-4 py-2 font-medium hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed">Simpan</button>
+            </div>
+            <p id="error-form" role="alert" class="text-sm text-red-600 mt-2 hidden"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="notifikasi" role="status" aria-live="polite"
+    class="hidden fixed bottom-4 right-4 bg-emerald-600 text-white  px-4 py-2 shadow"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

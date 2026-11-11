@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>what's poppin</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+<nav class="bg-gray-800 border-b border-gray-700 p-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="absolute left hidden md:flex justify-end gap-6">
+      <a href="#beranda" class="hover:underline">Beranda</a>
+      <a href="#about_me" class="hover:underline">About Me</a>
+      <a href="#software" class="hover:underline">Software</a>
+      <a href="#ingfo" class="hover:underline">Ingfoin</a>
+    </div>
+
+    <div class="md:hidden flex justify-end">
+      <details class="relative">
+        <summary class="cursor-pointer list-none">
+          <div class="space-y-1 w-6">
+            <div class="h-0.5 bg-white"></div>
+            <div class="h-0.5 bg-white"></div>
+            <div class="h-0.5 bg-white"></div>
+          </div>
+        </summary>
+
+        <div class="absolute right-0 mt-4 w-48 bg-gray-800 border border-gray-700 p-4 space-y-3">
+          <a href="#beranda" class="block hover:underline">Beranda</a>
+          <a href="#about_me" class="block hover:underline">About Me</a>
+          <a href="#software" class="block hover:underline">Software</a>
+          <a href="#ingfo" class="block hover:underline">Ingfoin</a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</nav>
+
+<header id="beranda" class="bg-gray-900 bg-blend-overlay bg-[url('https://arknights.wiki.gg/images/Bg_0_rhodes3.png?530f72')] bg-cover bg-center bg-no-repeat py-24 px-4 text-center border-b border-gray-700">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Namakemono</h1>
+    <h2 class="text-2xl font-bold mb-4 text-gray-500">(Lazy Cat)</h2>
+    <p class="text-gray-300 text-base mb-6">
+      Landing page utk servis yang belum ada. Kalaupun ada, yah untuk random things. Malas isi, kayak judul.
+    </p>
+    <div class="space-x-4">
+      <a href="#ingfo" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 inline-block">Ingfoin Aku</a>
+      <a href="#about_me" class="bg-gray-700 hover:bg-gray-600 text-white font-bold px-4 py-2 inline-block">About Me?</a>
+    </div>
+  </div>
+</header>
+
+  <section id="about_me" class="py-12 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center">About Me?</h2>
+    <p class="text-gray-300 text-center">
+      Namakemono (Lazy Cat) adalah website yang berfungsi sebagai main hub untuk software yang saya kerjakan. That is all, I think.
+    </p>
+  </section>
+
+  <section id="software" class="py-12 px-4 bg-gray-800 border-t border-b border-gray-700">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-center">Softwares</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 p-6 border border-gray-700">
+          <h3 class="text-xl font-bold mb-2 text-blue-400">Clayblet</h3>
+          <p class="text-gray-300">Khusus bagi para dev backend, nama dari kata clay tablet, alat tulis masa Mesopotamia. Menulis SQL dan dapat modifikasi tabel secara langsung.</p>
+        </div>
+        <div class="bg-gray-900 p-6 border border-gray-700">
+          <h3 class="text-xl font-bold mb-2 text-blue-400">Guild Handbook</h3>
+          <p class="text-gray-300">Game related, tepatnya MonHun. Kumpulan combo dan guide monster :v.</p>
+        </div>
+        <div class="bg-gray-900 p-6 border border-gray-700">
+          <h3 class="text-xl font-bold mb-2 text-blue-400">Tankle</h3>
+          <p class="text-gray-300">Wordle, tapi tank. Simple :v.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-8 text-center">Testimoni</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 p-4 border border-gray-700">
+        <p class="text-gray-300 mb-2">"wong kagak tau isi opo"</p>
+        <p class="font-bold text-blue-400">- Someone</p>
+      </div>
+      <div class="bg-gray-800 p-4 border border-gray-700">
+        <p class="text-gray-300 mb-2">"cihuy pro"</p>
+        <p class="font-bold text-blue-400">- customer</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ingfo" class="py-12 px-4 bg-gray-800 border-t border-gray-700">
+    <div class="max-w-md mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-center">Ingpoin Gwej</h2>
+      <form class="space-y-4" onsubmit="return false;">
+        <div>
+          <label class="block mb-1 text-sm">Nama Lengkap</label>
+          <input type="text" class="w-full bg-gray-900 border border-gray-700 p-2 text-white">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Email</label>
+          <input type="email" class="w-full bg-gray-900 border border-gray-700 p-2 text-white">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Pesan</label>
+          <textarea class="w-full bg-gray-900 border border-gray-700 p-2 text-white" rows="3"></textarea>
+        </div>
+        <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 py-6 border-t border-gray-700 text-center text-sm text-gray-400">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div>&copy; 2026 Christian Jordan</div>
+      <div class="space-x-4">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hover:underline">Privasi</a>
+        <a href="#" class="hover:underline">Syarat</a>
+        <a href="#" class="hover:underline">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

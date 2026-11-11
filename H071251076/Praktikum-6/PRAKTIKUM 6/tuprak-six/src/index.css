@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f3f6fb;
+  --color-ink: #14213d;
+  --color-cobalt: #2b59c3;
+  --color-mist: #dce5f7;
+  --color-muted: #5b667a;
+  --color-amber: #f2b705;
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-paper font-body text-ink antialiased;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @apply outline-2 outline-offset-4 outline-cobalt;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
